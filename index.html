@@ -3,377 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Light Summer Palette</title>
+<title>Light Summer</title>
 
 <style>
-*{box-sizing:border-box;}
-
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+body {
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+background:#f6f5f4;
 margin:0;
-background:#f5f2f1;
+padding:20px;
+color:#333;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:8px 16px 16px;
+h1{
+font-family: Georgia, serif;
+font-size:38px;
+margin-bottom:0;
 }
 
-.header{
-text-align:center;
-margin-bottom:8px;
+.subtitle{
+color:#777;
+margin-bottom:30px;
 }
 
-.logo{
-display:block;
-max-width:220px;
-margin:0 auto 6px;
+.section{
+margin-top:40px;
 }
 
-.header h1{
-font-family:Georgia,serif;
-font-weight:500;
-margin:0;
+.section-title{
+letter-spacing:3px;
+font-size:14px;
+color:#8c8f95;
+margin-bottom:15px;
 }
 
-.grid{
+.palette{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:14px;
 }
 
-.section-title{
-grid-column:1/-1;
-font-size:12px;
-letter-spacing:.15em;
-color:#7b7f8d;
-margin-top:14px;
-}
-
-.tile{
-aspect-ratio:1;
-border-radius:20px;
-cursor:pointer;
-}
-
-.lightbox{
-position:fixed;
-inset:0;
-display:none;
-z-index:999;
-}
-
-.lightbox.show{
-display:block;
-}
-
-.lightbox-color{
-position:absolute;
-inset:0;
-}
-
-.close-btn{
-position:absolute;
-top:32px;
-right:32px;
-width:36px;
-height:36px;
-border-radius:50%;
-border:none;
-background:rgba(255,255,255,.25);
-color:white;
-font-size:22px;
-display:flex;
-align-items:center;
-justify-content:center;
-backdrop-filter:blur(6px);
--webkit-backdrop-filter:blur(6px);
-cursor:pointer;
-}
-
-.controls{
-position:absolute;
-top:32px;
-right:84px;
-display:flex;
-gap:8px;
-}
-
-.btn{
-width:36px;
-height:36px;
-border-radius:50%;
-border:none;
-background:rgba(255,255,255,.25);
-color:white;
-font-size:16px;
-display:flex;
-align-items:center;
-justify-content:center;
-backdrop-filter:blur(6px);
--webkit-backdrop-filter:blur(6px);
-cursor:pointer;
-}
-
-.swipe{
-position:absolute;
-bottom:18px;
-left:50%;
-transform:translateX(-50%);
-color:white;
-letter-spacing:.15em;
-font-size:12px;
-}
-
-@media (max-width:640px){
-.logo{
-max-width:180px;
-}
-
-.grid{
-gap:12px;
-}
-
-.tile{
+.swatch{
+aspect-ratio:1/1;
 border-radius:18px;
-}
-
-.close-btn{
-top:28px;
-right:28px;
-}
-
-.controls{
-top:28px;
-right:76px;
-}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<div class="header">
-<img class="logo" src="logo.png" alt="Shades of Hue logo">
 <h1>Light Summer</h1>
-<div>Tap color • Swipe to browse</div>
+<div class="subtitle">Tap color • Swipe to browse</div>
+
+<div class="section">
+<div class="section-title">LIGHT SUMMER NEUTRALS</div>
+<div class="palette">
+<div class="swatch" style="background:#f3f2ef"></div>
+<div class="swatch" style="background:#e8e6e2"></div>
+<div class="swatch" style="background:#d8d4cc"></div>
+<div class="swatch" style="background:#c9c3bb"></div>
+<div class="swatch" style="background:#b9b1a8"></div>
+<div class="swatch" style="background:#cfd3d9"></div>
+<div class="swatch" style="background:#bfc6cf"></div>
+<div class="swatch" style="background:#aeb7c2"></div>
+</div>
 </div>
 
-<div id="grid" class="grid"></div>
-
+<div class="section">
+<div class="section-title">SOFT COOL GREYS</div>
+<div class="palette">
+<div class="swatch" style="background:#b6c0cc"></div>
+<div class="swatch" style="background:#a5b2c0"></div>
+<div class="swatch" style="background:#95a4b5"></div>
+<div class="swatch" style="background:#8698ab"></div>
+<div class="swatch" style="background:#788da1"></div>
+</div>
 </div>
 
-<div id="lightbox" class="lightbox">
-<div id="lightboxColor" class="lightbox-color"></div>
-
-<button id="close" class="close-btn">×</button>
-
-<div class="controls">
-<button id="prev" class="btn">←</button>
-<button id="next" class="btn">→</button>
+<div class="section">
+<div class="section-title">LIGHT BLUES</div>
+<div class="palette">
+<div class="swatch" style="background:#c7d8ea"></div>
+<div class="swatch" style="background:#b7cde3"></div>
+<div class="swatch" style="background:#a7c1dc"></div>
+<div class="swatch" style="background:#96b4d4"></div>
+<div class="swatch" style="background:#85a7cc"></div>
+<div class="swatch" style="background:#749ac4"></div>
+</div>
 </div>
 
-<div class="swipe">SWIPE</div>
+<div class="section">
+<div class="section-title">DENIM + PERIWINKLE</div>
+<div class="palette">
+<div class="swatch" style="background:#7f93c9"></div>
+<div class="swatch" style="background:#7388c2"></div>
+<div class="swatch" style="background:#687dbb"></div>
+<div class="swatch" style="background:#5d72b4"></div>
+<div class="swatch" style="background:#5368ad"></div>
+</div>
 </div>
 
-<script>
+<div class="section">
+<div class="section-title">AQUAS + SEAFOAMS</div>
+<div class="palette">
+<div class="swatch" style="background:#bfe1df"></div>
+<div class="swatch" style="background:#acd6d4"></div>
+<div class="swatch" style="background:#99cbc9"></div>
+<div class="swatch" style="background:#86c0be"></div>
+<div class="swatch" style="background:#73b5b3"></div>
+<div class="swatch" style="background:#61aaa8"></div>
+</div>
+</div>
 
-const groups = [
+<div class="section">
+<div class="section-title">MINTS + LIGHT TEALS</div>
+<div class="palette">
+<div class="swatch" style="background:#b7dcd1"></div>
+<div class="swatch" style="background:#a4d1c6"></div>
+<div class="swatch" style="background:#91c6bb"></div>
+<div class="swatch" style="background:#7ebbaf"></div>
+<div class="swatch" style="background:#6bb0a4"></div>
+<div class="swatch" style="background:#59a599"></div>
+</div>
+</div>
 
-{
-title:"LIGHT SUMMER NEUTRALS",
-colors:[
-"#F3F1EB",
-"#E7E4DB",
-"#DDD7CA",
-"#D0C7BE",
-"#C3BBB7",
-"#DCDCE0",
-"#CFCFD6",
-"#BCC3CF",
-"#AEB7C4"
-]
-},
+<div class="section">
+<div class="section-title">LIGHT SUMMER YELLOWS</div>
+<div class="palette">
+<div class="swatch" style="background:#f2efc8"></div>
+<div class="swatch" style="background:#ece6b5"></div>
+<div class="swatch" style="background:#e5dd9f"></div>
+<div class="swatch" style="background:#ddd48a"></div>
+<div class="swatch" style="background:#d4ca74"></div>
+</div>
+</div>
 
-{
-title:"SOFT COOL GREYS",
-colors:[
-"#B3BBC6",
-"#9FAAB8",
-"#8F9EAF",
-"#7B91A8",
-"#6F869E"
-]
-},
+<div class="section">
+<div class="section-title">LIGHT PINKS</div>
+<div class="palette">
+<div class="swatch" style="background:#f2c9d4"></div>
+<div class="swatch" style="background:#ecb7c6"></div>
+<div class="swatch" style="background:#e6a5b8"></div>
+<div class="swatch" style="background:#df93aa"></div>
+<div class="swatch" style="background:#d9819c"></div>
+</div>
+</div>
 
-{
-title:"LIGHT BLUES",
-colors:[
-"#C7DCF4",
-"#B5D3F1",
-"#A4C8EB",
-"#8DBAE5",
-"#78ACDD",
-"#6597D0",
-"#5A82C6"
-]
-},
+<div class="section">
+<div class="section-title">ROSES + BERRY PINKS</div>
+<div class="palette">
+<div class="swatch" style="background:#d87194"></div>
+<div class="swatch" style="background:#d05f87"></div>
+<div class="swatch" style="background:#c84d7a"></div>
+<div class="swatch" style="background:#bf3b6d"></div>
+<div class="swatch" style="background:#b62960"></div>
+</div>
+</div>
 
-{
-title:"DENIM + PERIWINKLE",
-colors:[
-"#8A9FDC",
-"#7B90D4",
-"#6E7BC8",
-"#A8A9E2",
-"#9A99D9",
-"#8C88CF"
-]
-},
+<div class="section">
+<div class="section-title">LIGHT LAVENDERS</div>
+<div class="palette">
+<div class="swatch" style="background:#d8cce7"></div>
+<div class="swatch" style="background:#cbbfe0"></div>
+<div class="swatch" style="background:#bfb2d8"></div>
+<div class="swatch" style="background:#b2a5d1"></div>
+<div class="swatch" style="background:#a598c9"></div>
+</div>
+</div>
 
-{
-title:"AQUAS + SEAFOAMS",
-colors:[
-"#BEE7E7",
-"#A6DDDF",
-"#8ED3D9",
-"#73C6D5",
-"#9ADBC9",
-"#83D0BC",
-"#6CC3B0"
-]
-},
-
-{
-title:"MINTS + LIGHT TEALS",
-colors:[
-"#A9DABF",
-"#93CFB7",
-"#7EC8B2",
-"#67BEAF",
-"#52B5AE",
-"#45AAA7"
-]
-},
-
-{
-title:"LIGHT SUMMER YELLOWS",
-colors:[
-"#F0EAA8",
-"#E9E08F",
-"#E4D67A",
-"#E7D7A5",
-"#E5DBBC"
-]
-},
-
-{
-title:"LIGHT PINKS",
-colors:[
-"#F4C4D6",
-"#F0B3CB",
-"#EBA0BE",
-"#E78CAF",
-"#EFAFD4"
-]
-},
-
-{
-title:"ROSES + BERRY PINKS",
-colors:[
-"#E97D9F",
-"#E2668E",
-"#DA5D89",
-"#D64F82",
-"#CE437B",
-"#C86BA5"
-]
-},
-
-{
-title:"LIGHT LAVENDERS",
-colors:[
-"#D9C8EA",
-"#CDBBE4",
-"#C2AFDE",
-"#B7A3D8",
-"#AB99D0"
-]
-}
-
-];
-
-const grid=document.getElementById("grid");
-const lightbox=document.getElementById("lightbox");
-const lightboxColor=document.getElementById("lightboxColor");
-
-let all=[];
-let index=0;
-let startX=0;
-
-groups.forEach(group=>{
-
-const title=document.createElement("div");
-title.className="section-title";
-title.textContent=group.title;
-grid.appendChild(title);
-
-group.colors.forEach(color=>{
-
-all.push(color);
-
-const tile=document.createElement("div");
-tile.className="tile";
-tile.style.background=color;
-
-tile.onclick=()=>{
-index=all.indexOf(color);
-open();
-};
-
-grid.appendChild(tile);
-
-});
-
-});
-
-function open(){
-lightbox.classList.add("show");
-render();
-}
-
-function render(){
-lightboxColor.style.background=all[index];
-}
-
-function next(){
-index=(index+1)%all.length;
-render();
-}
-
-function prev(){
-index=(index-1+all.length)%all.length;
-render();
-}
-
-document.getElementById("close").onclick=()=>lightbox.classList.remove("show");
-document.getElementById("next").onclick=next;
-document.getElementById("prev").onclick=prev;
-
-lightbox.addEventListener("touchstart",e=>{
-startX=e.touches[0].clientX;
-});
-
-lightbox.addEventListener("touchend",e=>{
-let diff=e.changedTouches[0].clientX-startX;
-if(Math.abs(diff)<40)return;
-diff<0?next():prev();
-});
-
-</script>
+<div class="section">
+<div class="section-title">SOFT SUMMER PLUMS</div>
+<div class="palette">
+<div class="swatch" style="background:#b884a8"></div>
+<div class="swatch" style="background:#a97499"></div>
+<div class="swatch" style="background:#9a648a"></div>
+<div class="swatch" style="background:#8b547b"></div>
+</div>
+</div>
 
 </body>
 </html>
